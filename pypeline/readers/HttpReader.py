@@ -4,7 +4,7 @@ from pypeline.readers import Reader
 
 class HttpReader(Reader):
     def __init__(self, source, data = None, headers = dict()):
-        super(HttpReader, self).__init__(source)
+        self.source = source
         self.data = data
         self.headers = headers
 
