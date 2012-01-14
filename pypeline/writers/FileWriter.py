@@ -6,4 +6,4 @@ class FileWriter(Writer):
         self.sink = sink
 
     def __call__(self, content):
-        open(self.sink).write(content)
+        open(self.sink, 'a+').write(content)
