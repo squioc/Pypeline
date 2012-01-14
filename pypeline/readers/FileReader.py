@@ -4,5 +4,5 @@ from pypeline.readers import Reader
 
 class FileReader(Reader):
     def __call__(self):
-        return open(self.source).read()
+        yield open(self.source).read()
 

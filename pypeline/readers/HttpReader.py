@@ -9,4 +9,4 @@ class HttpReader(Reader):
         self.headers = headers
 
     def __call__(self):
-        return urlopen(Request(self.source, data = self.data, headers = self.headers)).read()
+        yield urlopen(Request(self.source, data = self.data, headers = self.headers)).read()
